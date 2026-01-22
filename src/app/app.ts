@@ -31,7 +31,7 @@ export class App {
   title = signal('Movie Catalog');
 
   searchText = '';
-  movies: Movie[] = [];
+  movies = signal<Movie[]>([]);
 
   loading = false;
 
@@ -46,7 +46,8 @@ export class App {
 
     this.movieService.getMovies().subscribe({
       next: (data) => {
-        this.movies = data;
+        console.log('Loaded movies:', data);
+        this.movies.set(data);
         this.loading = false;
       },
       error: (err) => {
@@ -61,7 +62,7 @@ export class App {
 
     this.movieService.getMovies(this.searchText).subscribe({
       next: (data) => {
-        this.movies = data;
+        this.movies.set(data);
         this.loading = false;
       },
       error: (err) => {

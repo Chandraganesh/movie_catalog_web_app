@@ -14,8 +14,11 @@
 .search-bar {
   display: flex;
   gap: 16px;
-  align-items: center;
-  margin-bottom: 24px;
+  align-items: stretch;
+}
+
+.search-bar button {
+  height: 56px;
 }
 
 .search-input {

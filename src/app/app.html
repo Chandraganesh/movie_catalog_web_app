@@ -20,7 +20,7 @@
 
     <!-- Movie List -->
     <div class="movie-list">
-      <mat-card class="movie-card" *ngFor="let movie of movies">
+      <mat-card class="movie-card" *ngFor="let movie of movies()">
 
         <img mat-card-image [src]="movie.imageUrl" />
 
