@@ -3,16 +3,13 @@
 </mat-toolbar>
 
 <div class="page-wrapper">
-
   <div class="content-container">
-
     <!-- Search Bar -->
     <div class="search-bar">
       <mat-form-field appearance="outline" class="search-input">
         <mat-label>Search movie</mat-label>
         <input matInput [(ngModel)]="searchText" placeholder="Enter movie name">
       </mat-form-field>
-
       <button mat-raised-button color="primary" (click)="search()">
         Search
       </button>
@@ -21,17 +18,14 @@
     <!-- Movie List -->
     <div class="movie-list">
       <mat-card class="movie-card" *ngFor="let movie of movies()">
-
-        <img mat-card-image [src]="movie.imageUrl" />
-
-        <mat-card-content>
-          <h3>{{ movie.title }}</h3>
-          <p>Year: {{ movie.year }}</p>
-        </mat-card-content>
-
+        <div class="movie-row">
+          <img [src]="movie.imageUrl" alt="poster" />
+          <div class="movie-info">
+            <h3>{{ movie.title }}</h3>
+            <p>Year: {{ movie.year }}</p>
+          </div>
+        </div>
       </mat-card>
     </div>
-
   </div>
-
 </div>

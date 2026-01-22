@@ -32,20 +32,30 @@
 }
 
 .movie-card {
+  padding: 16px;
+}
+
+.movie-row {
   display: flex;
   gap: 16px;
-  padding: 16px;
+  align-items: center;
+}
 
-  img {
-    width: 100px;
-    height: 140px;
-    object-fit: cover;
-    border-radius: 4px;
-  }
+.movie-row img {
+  width: 100px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 4px;
+}
 
-  mat-card-content {
+.movie-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mat-card-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
-  }
 }
