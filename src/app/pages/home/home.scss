@@ -1,0 +1,56 @@
+.page-wrapper {
+  min-height: calc(100vh - 64px);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 40px;
+}
+
+.content-container {
+  width: 100%;
+  max-width: 600px;
+}
+
+.search-bar {
+  display: flex;
+  gap: 16px;
+  align-items: stretch;
+}
+
+.search-input {
+  flex: 1;
+}
+
+.search-bar button {
+  height: 56px;
+}
+
+.movie-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.movie-card {
+  padding: 16px;
+}
+
+.movie-row {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.movie-row img {
+  width: 100px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.movie-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
